@@ -8,7 +8,7 @@ class ShopifyProductFixture
 
   def initialize
     @shop_url = "https://#{ENV['SHOP_NAME']}.myshopify.com"
-    @shop_admin_url = "https://#{ENV['ADMIN_API_KEY']}:#{ENV['ADMIN_API_SECRET']}@#{ENV['SHOP_NAME']}.myshopify.com"
+    @shop_admin_url = "https://#{ENV['ADMIN_API_KEY']}:#{ENV['ADMIN_API_PASSWORD']}@#{ENV['SHOP_NAME']}.myshopify.com"
     @shop_admin_version = ENV['ADMIN_API_VERSION']
 
     @product_id = nil

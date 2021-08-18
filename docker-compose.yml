@@ -4,7 +4,7 @@ services:
     environment:
       - SHOP_NAME=${SHOP_NAME}
       - ADMIN_API_KEY=${ADMIN_API_KEY}
-      - ADMIN_API_SECRET=${ADMIN_API_SECRET}
+      - ADMIN_API_PASSWORD=${ADMIN_API_PASSWORD}
       - ADMIN_API_VERSION=${ADMIN_API_VERSION}
     build: .
     container_name: sample-login-capybara-rspec

@@ -2,11 +2,11 @@
 
 #----------------------------------------------------------
 # This test is an example of a functional browser-based
-# acceptance test against a shopify storefront and its
+# acceptance test against a Shopify storefront and its
 # associated Shopify Admin API.
 #
 # Specifically, this test demonstrates that a new product
-# can be created in the shopify storefront and added to
+# can be created in the Shopify storefront and added to
 # the Shopping Cart.
 #
 # This sample uses Capybara and its RSpec aliases:
