@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  browsertests:
+    environment:
+      - BROWSER=chrome
+      - REMOTE=http://seleniumchrome:4444/wd/hub
+    command: ./script/runtests
+    depends_on:
+      - seleniumchrome
+
+  seleniumchrome:
+    image: selenium/standalone-chrome:latest
+    container_name: selenium-chrome
+    volumes:
+      - /dev/shm:/dev/shm
+    healthcheck:
+      test: ["CMD-SHELL", "curl --silent --fail -X HEAD http://localhost:4444/wd/hub"]
+      interval: 2s
+      timeout: 5s
+      retries: 30

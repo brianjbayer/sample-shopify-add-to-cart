@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  browsertests:
+    environment:
+      - BROWSER=firefox
+      - REMOTE=http://seleniumfirefox:4444/wd/hub
+    command: ./script/runtests
+    depends_on:
+      - seleniumfirefox
+
+  seleniumfirefox:
+    image: selenium/standalone-firefox:latest
+    container_name: selenium-firefox
+    volumes:
+      - /dev/shm:/dev/shm
+    healthcheck:
+      test: ["CMD-SHELL", "curl --silent --fail -X HEAD http://localhost:4444/wd/hub"]
+      interval: 2s
+      timeout: 5s
+      retries: 30

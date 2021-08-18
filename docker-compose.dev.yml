@@ -1,0 +1,7 @@
+version: '3.4'
+services:
+  browsertests:
+    image: "${IMAGE}"
+    container_name: "sample-login-capybara-rspec-${IMAGE}"
+    volumes:
+      - ${SRC}:/app
