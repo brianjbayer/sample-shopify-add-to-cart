@@ -4,7 +4,7 @@ require 'shopify_api'
 
 # Shopify Product Admin/Create Product Fixture
 class ShopifyProductFixture
-  attr_reader :shop_url, :product_id, :product_handle, :product_title, :shop_admin_version
+  attr_reader :product_id, :product_handle, :product_title
 
   def initialize
     @shop_url = "https://#{ENV['SHOP_NAME']}.myshopify.com"
