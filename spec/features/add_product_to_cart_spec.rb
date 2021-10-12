@@ -47,6 +47,8 @@ feature 'Add New Product to Shopping Cart' do
     product_page.add_to_cart
 
     # THEN the new product is in my shopping cart
+    # TODO: Replace sleep with better page load wait mechanism (Safari)
+    sleep 2
     expect(shopping_cart_page.current_url).to end_with shopping_cart_page.url
     expect(shopping_cart_page).to be_displayed
     expect(shopping_cart_page.heading.text).to include(ShoppingCartPage::TITLE)
